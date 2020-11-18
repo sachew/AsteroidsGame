@@ -17,3 +17,19 @@ public void draw()
     stars[i].show();
   }
 }
+public void keyPressed(){
+  if(key=='d'){
+    ship1.turn(15);
+  } else if(key == 'a'){
+    ship1.turn(-15);
+    
+  } else if(key == ' '){
+    ship1.accelerate(.2);
+  } else if(key == 'h'){
+    ship1.setXspeed(0);
+    ship1.setYspeed(0);
+    ship1.setX(Math.random()*500);
+    ship1.setY(Math.random()*500);
+    ship1.setDirection(Math.random()*360);
+  }
+}
